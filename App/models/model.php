@@ -63,6 +63,14 @@ class Model
 
 
     }
+    public static function all7()
+    {
+        $model = new static;
+        $rows = App::get('database')->selectAll7($model->getTable2());
+        return array_map(fn($row) => new static($row), $rows);
+
+
+    }
    
     public static function create($properties)
     {

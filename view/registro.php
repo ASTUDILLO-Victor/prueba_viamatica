@@ -1,4 +1,5 @@
 <?php require "params/nav.php"; ?>
+
 <style>
         
         .help-text {
@@ -633,3 +634,21 @@
         
     });
     </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const nombreInput = document.getElementById('Enom');
+    const apellidoInput = document.getElementById('Eape');
+    const emailInput = document.getElementById('Email');
+    
+    function generarEmail() {
+        const nombre = nombreInput.value.trim().toLowerCase().replace(/\s+/g, '');
+        const apellido = apellidoInput.value.trim().toLowerCase().replace(/\s+/g, '');
+        if (nombre && apellido) {
+            emailInput.value = `${nombre}.${apellido}@gmail.com`;
+        }
+    }
+    
+    nombreInput.addEventListener('input', generarEmail);
+    apellidoInput.addEventListener('input', generarEmail);
+});
+</script>

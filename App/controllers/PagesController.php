@@ -54,7 +54,7 @@ class PagesController
         if (Auth::check()) {
             $userRole = $_SESSION['id_rol'] ?? null; // Verifica el rol del usuario desde la sesión
     
-            if ($userRole === 2 ) {
+            if ($userRole === 2 or $userRole === 3    ) {
                 $user = empleado::all3();
                 $todo = array_filter($user);
                 $user1 = empleado::all6();
@@ -77,15 +77,24 @@ class PagesController
         if (Auth::check()) {
             $userRole = $_SESSION['id_rol'] ?? null; // Verifica el rol del usuario desde la sesión
     
-            if ($userRole === 2 ) {
+            if ($userRole === 2 or $userRole === 3 ) {
                 $user = empleado::all4();
                 $todo = array_filter($user);
                 return view('tables4', [
                     'tasks' => $user,
                     'todo' => $todo,
                 ]);
-            } else {
-                return redirect('index.php?url=templete'); // Redirige a la página principal si no es Admin
+            } elseif($userRole === 3) {
+                // Redirige a la página principal si no es Admin
+                $user = empleado::all4();
+                $todo = array_filter($user);
+                return view('tables4', [
+                    'tasks' => $user,
+                    'todo' => $todo,
+                ]);
+                
+            }else{
+                return redirect('index.php?url=templete');
             }
         } else {
             return redirect('index.php?url=login-form'); // Redirige a la página de inicio de sesión si no está autenticado
@@ -102,7 +111,7 @@ class PagesController
                 'tasks' => $user,
                 'todo' => $todo,
             ]);
-            } elseif($userRole === 2) {
+            } elseif($userRole === 2 or $userRole === 3) {
                 $user = empleado::all6();
                 $todo = array_filter($user);
                 return view('registro',[

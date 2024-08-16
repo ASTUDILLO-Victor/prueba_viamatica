@@ -16,6 +16,7 @@ class Auth{
         return false;
 
     }
+    
     public static function check(){
         static::ensureSessionStarted();
         if(empty($_SESSION["id_e"])){

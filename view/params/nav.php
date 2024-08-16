@@ -144,63 +144,26 @@
 
             <?php if (isset($_SESSION['id_rol']) && $_SESSION['id_rol'] == 3): ?>
                 <!-- Código específico para usuarios -->
+                <li class="nav-item">
+                <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseUtilities1"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>ADMINISTRACIÓN</span>
+                </a>
+                <div id="collapseUtilities1" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">TABLAS DE USUARIOS:</h6>
+                        <a class="collapse-item" href="index.php?url=tables3">USUARIOS</a>
+                        <a class="collapse-item" href="index.php?url=tables4">DESACTIVADOS</a>
+                        
+                    </div>
+                </div>
+            </li>
             <?php endif ?>
             
             
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>MONITOREO</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Concentraciones:</h6>
-                        <a class="collapse-item"  href="index.php?url=grafico">Partículas Suspendidas en el Aire</a>
-                        
-                        <a class="collapse-item" href="index.php?url=grafico2">Compuestos Orgánicos Vólatiles</a>
-
-                        
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseUtilities2"
-                aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-clipboard"></i>
-                    <span>REPORTES</span></a>
-                    <div id="collapseUtilities2" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Concentraciones:</h6>
-                        <a class="collapse-item" href="index.php?url=reporte">Reporte</a>                        
-                        <a class="collapse-item" href="index.php?url=reporte_uno">Partículas Suspendidas en el Aire</a>
-                        <a class="collapse-item" href="index.php?url=reporte2">Compuestos Orgánicos Vólatiles</a>
-
-                    </div>
-                </div>
-            </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseUtilities3"
-                aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>MÁQUINA</span></a>
-                    <div id="collapseUtilities3" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Concentraciones:</h6>
-                        <a class="collapse-item" href="index.php?url=purificadora">Purificadora</a>
-                        <a class="collapse-item" href="index.php?url=mitigadora">Mitigadora</a>
-
-                    </div>
-                </div>
-            </li> -->
-            <li class="nav-item">
-                <a class="nav-link" href="index.php?url=purificadora">
-                    <i class="fas fa-toggle-off"></i>
-                    <span>MÁQUINA</span></a>
-            </li>
+            
 
         
             

@@ -52,6 +52,13 @@ class QueryBuilder
         $query->execute();
         return $query->fetchAll(\PDO::FETCH_ASSOC);
     }
+    public function selectAll7($table)
+    {
+        // $query = $this->pdo->prepare("SELECT * FROM {$table} where estado=1");
+        $query = $this->pdo->prepare("SELECT e.id_e, e.cedula, e.name, e.ape, e.email,e.id_rol, r.id_r, r.nombre, e.sexo, e.celu, e.fecha, e.dire FROM {$table} e JOIN rol r ON e.id_rol = r.id_r where e.estado=1");
+        $query->execute();
+        return $query->fetchAll(\PDO::FETCH_ASSOC);
+    }
     public function selectrole()  {
         $sql = "SELECT id_r, nombre FROM rol";
         $query = $this->pdo->prepare($sql);
