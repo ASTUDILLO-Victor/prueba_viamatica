@@ -272,10 +272,10 @@ class TasksController
     //validar cedula 
     public function validar()
     {
-        $usuario = "u246287323_root";
-        $password = "u1|G9Qd|9V";
+        $usuario = "root";
+        $password = "";
         $servidor = "localhost";
-        $basededatos = "u246287323_airsafe";
+        $basededatos = "proyecto";
         $con = mysqli_connect($servidor, $usuario, $password) or die("No se ha podido conectar al Servidor");
         mysqli_query($con, "SET SESSION collation_connection ='utf8_unicode_ci'");
         $db = mysqli_select_db($con, $basededatos) or die("Upps! Error en conectar a la Base de Datos");

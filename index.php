@@ -23,21 +23,14 @@ $routes =
     'login-form'=>['LoginController','show'] ,
     'login'=>['LoginController','login'] ,
     'logout'=> ['LoginController','logout'],
-    'graficos'=> ['PagesController','grafico'],
+   
     'registarlogin'=>['TasksController','registrar'],
     'validar'=>['TasksController','validar'],
     'recuperar'=>['recuperarControllers','show'],
     'recuperar2'=>['recuperarControllers','recuperar'],
     'resta'=>['PagesController','resta'],
     'correo'=>['TasksController','correo'],
-    'grafico'=>['PagesController','grafico'],
-    'grafico2'=>['PagesController','grafico2'],
-    'reporte'=>['PagesController','reporte'],
-    'reporte2'=>['PagesController','reporte2'],
-    'mychart'=>['mychartController','mychart'],
-    'grafico3'=>['PagesController','grafico3'],
-    'reporte_uno'=>['PagesController','reporte_uno'],
-    'purificadora'=>['PagesController','purificadora'],
+
 
 
     
