@@ -136,79 +136,11 @@ class PagesController
         // }
         
     }
-    public function services()
-    {
-        if (Auth::check()) {
-            return view('services');
-        } else {
-            return redirect('index.php?url=login-form');
-             // Asegura que el script se detenga después de la redirección
-        }
-
-    }
     public function resta()
     {
             return view('resta');
 
     }
-    public function grafico()
-    {
-        if (Auth::check()) {
-                return view('grafico');
-        } else {
-            return redirect('index.php?url=login-form'); // Redirige a la página de inicio de sesión si no está autenticado
-        }
-    }
-    public function grafico2()
-    {
-        if (Auth::check()) {
-                return view('grafico2');
-        } else {
-            return redirect('index.php?url=login-form'); // Redirige a la página de inicio de sesión si no está autenticado
-        }  
-    }
-    public function grafico3()
-    {
-        if (Auth::check()) {
-                return view('grafico3');
-        } else {
-            return redirect('index.php?url=login-form'); // Redirige a la página de inicio de sesión si no está autenticado
-        }  
-    }
-    public function reporte()
-    {
-        if (Auth::check()) {
-            return view('reporte');
-        } else {
-            return redirect('index.php?url=login-form'); // Redirige a la página de inicio de sesión si no está autenticado
-        }
-    }
-    public function reporte2()
-    {
-        if (Auth::check()) {
-            return view('reporte2');
-        } else {
-            return redirect('index.php?url=login-form'); // Redirige a la página de inicio de sesión si no está autenticado
-        }
-        
-    }
-    public function reporte_uno()
-    {
-        if (Auth::check()) {
-            return view('reporte_uno');
-        } else {
-            return redirect('index.php?url=login-form'); // Redirige a la página de inicio de sesión si no está autenticado
-        }
-        
-    }
-    public function purificadora()
-    {
-        if (Auth::check()) {
-            return view('purificadora');
-        } else {
-            return redirect('index.php?url=login-form'); // Redirige a la página de inicio de sesión si no está autenticado
-        }
-        
-    }
+    
 }
 
